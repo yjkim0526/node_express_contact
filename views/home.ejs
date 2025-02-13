@@ -1,0 +1,20 @@
+<%- include("./include/_header.ejs") %>
+
+  <!-- Main -->
+  <main id="site-main">
+
+    <div class="container">
+      <h3 class="p-2">로그인</h3>     
+
+      <form class="login" method="POST" action="/">
+        <label for="username"><b>아이디</b></label>
+        <input type="text" placeholder="사용자 아이디" name="username" id="username">
+        <label for="password"><b>비밀번호</b></label>
+        <input type="password" placeholder="비밀번호" name="password" id="password">
+        <button type="submit" class="mt-5">로그인</button>
+      </form>
+    </div>
+  </main>
+  <!-- /Main -->
+
+	<%- include("./include/_footer.ejs") %>

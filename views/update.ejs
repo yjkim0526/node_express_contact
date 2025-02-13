@@ -1,0 +1,37 @@
+<%- include("./include/_header.ejs") %>
+
+  <!-- Main -->
+    <main id="site-main">
+      <div class="button-box">        
+        <a href="/contacts" class="btn btn-light"><i class="fa-solid fa-list"></i>연락처 목록</a>
+      </div>
+      <h2>연락처 수정</h2>          
+      <p>연락처 정보를 수정</p>
+      <form action="/contacts/<%=contact._id%>?_method=PUT" method="POST" id="add-user">
+        <div class="user-info">
+          <div class="col-12">
+            <label for="name" class="col-form-label">이름</label>
+            <div>
+              <input type="text" class="form-control" name="name" id="name" value="<%=contact.name%>" placeholder="이름">
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="email" class="col-form-label">이메일</label>
+            <div>
+              <input type="text" class="form-control" name="email" id="email" value="<%=contact.email%>" placeholder="aaa@bb.c">
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="phone" class="col-form-label">전화번호</label>
+            <div>
+              <input type="text" class="form-control" name="phone" id="phone" value="<%=contact.phone%>" placeholder="전화번호">
+            </div>
+          </div>
+          <button type="submit" onclick="return confirm('수정 하시겠습니까?');">수정하기</button>
+        </div>
+      </form>   
+    </main>
+
+  <!-- /Main -->
+
+	<%- include("./include/_footer.ejs") %>
